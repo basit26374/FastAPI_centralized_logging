@@ -1,6 +1,10 @@
 # FastAPI_centralized_logging
 Learn how to do centralized logging in FastAPI framework
 
+# How to run
+- `uvicorn main:app --reload --workers 4`
+- `uvicorn main:app --workers 4`
+
 ## Problem with this code
 Both API's are working fine but due to centralized logging where we set request_id
 in log filter, we override request_id on long waited api from quick api call.
