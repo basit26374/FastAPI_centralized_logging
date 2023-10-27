@@ -40,7 +40,7 @@ async def wait():
     logger.addFilter(context_info)
 
     logger.info("Request comes from client to get long-waited resource access")
-    await common.wait_longer()
+    common.wait_longer()
     logger.info("Request /wait completed successfully")
     return {"message": "I am come afer long wait"}
 
