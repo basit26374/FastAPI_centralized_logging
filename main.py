@@ -53,7 +53,7 @@ async def wait():
 
 
     logger.info("Request comes from client to get long-waited resource access")
-    await common.wait_longer()
+    await common.wait_longer(logger)
     # time.sleep(10)
     logger.info("Request /wait completed successfully")
     print("/wait ->", request_id.get())
@@ -71,7 +71,7 @@ async def quick():
 
     print("/quick ->", request_id.get())
     logger.info("Request comes from client to get quick resource access")
-    common.quick()
+    common.quick(logger)
     logger.info("Request /quick completed successfully")
     print("/quick ->", request_id.get())
     return {"message": "Quick response"}
